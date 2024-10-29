@@ -6,9 +6,9 @@ def main():
     sorted = print_report(chars_dict)
     print(f"--- Begin report of {book_path} ---")
     print(f"{num_words} words found in the document \n")
-    #print(chars_dict)
     for char in sorted:
         print(f"The '{char["character"]}' character was found {char["num"]} times")
+    print("--- End Report ---")
 
 
 def get_num_words(text):
@@ -23,7 +23,6 @@ def get_character_appearances(text):
             character_dict[c] = 1
         elif c.isalpha():
             character_dict[c] += 1
-    #print(character_dict)
     return character_dict
     
 def get_book_text(path):
@@ -38,7 +37,6 @@ def print_report(dict):
     for key in dict.keys():
         tmp = [{"character": k, "num": v} for k,v in dict.items()]
     tmp.sort(reverse=True, key=sort_on)
-    print(type(tmp))
     return tmp
 
 
