@@ -1,2 +1,3 @@
 # bookbot
-A CLI powered book bot that uses Python to analyze text
+BookBot is my first project!
+
