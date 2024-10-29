@@ -8,7 +8,10 @@ def main():
         print(len(book_string))
         return len(book_string)
     
-    wordsInBook()
+    def characterAppearances():
+        text = wordsInBook()
+        
+    
 
 
 main()
