@@ -19,10 +19,10 @@ def get_character_appearances(text):
     character_dict = {}
     for char in text:
         c = char.lower()
-        if c not in character_dict and c.isalpha():
-            character_dict[c] = 1
-        elif c.isalpha():
-            character_dict[c] += 1
+        if c.isalpha():
+            character_dict.setdefault(c, 0)
+            character_dict[c] = character_dict[c] + 1
+
     return character_dict
     
 def get_book_text(path):
